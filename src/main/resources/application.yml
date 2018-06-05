@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: prod
+  application:
+    name: Logistics-Manager
+server:
+  port: 8080
+  prodBaseUrl: http://www.baidu.com
+  tomcat:
+    max-threads: 200
+    uri-encoding: UTF-8
+
+datasource:
+  jdbc_url: jdbc:mysql://localhost:3306/logistics_db?useUnicode=true
+  username: root
+  password: 123456
+  maximum_pool_size: 10
+
+mybatis:
+  configuration:
+    aggressiveLazyLoading: false
+    lazyLoadingEnabled: true
+    lazyLoadTriggerMethods: ""
+    mapUnderscoreToCamelCase: true
