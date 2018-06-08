@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="lib/img/favicon.ico">
+    <!-- Element css -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- global css -->
+    <link rel="stylesheet" href="lib/css/global.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- import Vue before Element -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+    <!-- import Element js -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+    <div id="app">
+        <el-button @click="visible = true">Button</el-button>
+        <el-dialog :visible.sync="visible" title="Hello world">
+            <p>Try Element</p>
+        </el-dialog>
+
+        <el-container>
+            <el-header>Header</el-header>
+            <el-container>
+                <el-aside width="150px">
+                    <el-menu
+                            default-active="1"
+                            class="el-menu-vertical-demo"
+                            @open="handleOpen"
+                            @close="handleClose"
+                            background-color="#545c64"
+                            text-color="#fff"
+                            active-text-color="#ffd04b">
+                        <el-menu-item index="1">
+                            <span slot="title">导航一</span>
+                        </el-menu-item>
+                        <el-menu-item index="2">
+                            <span slot="title">导航二</span>
+                        </el-menu-item>
+                        <el-menu-item index="3">
+                            <span slot="title">导航三</span>
+                        </el-menu-item>
+                        <el-menu-item index="4">
+                            <span slot="title">导航四</span>
+                        </el-menu-item>
+                    </el-menu>
+                </el-aside>
+                <el-main>Main</el-main>
+            </el-container>
+        </el-container>
+    </div>
+</body>
+
+<script>
+</script>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return { visible: false }
+        },
+        methods: {
+            handleOpen: function(key, keyPath) {
+                console.log(key, keyPath);
+            },
+            handleClose: function(key, keyPath) {
+                console.log(key, keyPath);
+            }
+        }
+    })
+</script>
+
+</html>

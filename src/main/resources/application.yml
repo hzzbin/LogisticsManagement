@@ -3,6 +3,9 @@ spring:
     active: prod
   application:
     name: Logistics-Manager
+  mvc:
+    favicon:
+      enabled: false
 server:
   port: 8080
   prodBaseUrl: http://www.baidu.com
